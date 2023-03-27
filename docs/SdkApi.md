@@ -4,7 +4,7 @@ All URIs are relative to *https://api.konfigthis.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generate**](SdkApi.md#generate) | **POST** /generate | Generate SDKs and receive signed S3 download URLs for the generated packages.
+[**generate**](SdkApi.md#generate) | **POST** /generate | Generate SDKs
 
 
 # **generate**
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 #### **POST** /generate
 
 ### Description
-Generate SDKs
+Generate SDKs and receive signed S3 download URLs for the generated packages
 
 ### Example
 
@@ -23,6 +23,8 @@ import { Konfig } from "konfig-typescript-sdk"
 const konfig = new Konfig({
     // Defining the base path is optional and defaults to https://api.konfigthis.com
     // basePath: "https://api.konfigthis.com",
+    authorization: 'API_KEY',
+    session: 'API_KEY',
 })
 
 const generateResponse = await konfig.sdk.generate({

@@ -56,7 +56,7 @@ All URIs are relative to *https://api.konfigthis.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *LintingApi* | [**lint**](docs/LintingApi.md#lint) | **POST** /lint | Lint your OpenAPI Specification
-*SdkApi* | [**generate**](docs/SdkApi.md#generate) | **POST** /generate | Generate SDKs and receive signed S3 download URLs for the generated packages.
+*SdkApi* | [**generate**](docs/SdkApi.md#generate) | **POST** /generate | Generate SDKs
 *SpecificationsApi* | [**push**](docs/SpecificationsApi.md#push) | **POST** /push | Push your OpenAPI Specification to Konfig
 
 

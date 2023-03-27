@@ -19,7 +19,7 @@ type ApiKey =
   | { [apiKeyName: string]: string | undefined };
 
 export interface ConfigurationParameters {
-    Authorization?: string;
+    authorization?: string;
     session?: string;
     apiKey?: ApiKey;
     username?: string;
@@ -90,8 +90,8 @@ export class Configuration {
         this.apiKey = param.apiKey
         if (this.apiKey === undefined) {
             this.apiKey = {}
-            if (param.Authorization !== undefined)
-                this.apiKey["Authorization"] = param.Authorization
+            if (param.authorization !== undefined)
+                this.apiKey["authorization"] = param.authorization
             if (param.session !== undefined)
                 this.apiKey["session"] = param.session
         }
