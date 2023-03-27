@@ -1,0 +1,1 @@
+# konfig-typescript-sdk
