@@ -1,7 +1,7 @@
 {
   "name": "konfig-typescript-sdk",
   "version": "1.0.0",
-  "description": "Client for Konfig\&#39;s REST API",
+  "description": "Client for Konfig REST API",
   "author": "Konfig",
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 /**
- * Konfig\'s REST API
+ * Konfig REST API
  * To help you generate SDKs with Konfig
  *
  * The version of the OpenAPI document: 1.0.0
