@@ -21,7 +21,7 @@
     "build": "npm run clean && tsc",
     "clean": "rm -rf dist/",
     "prepack": "npm run build",
-    "release-ci": "release-it --ci",
+    "release-ci": "konfig-release-it --ci",
     "test": "jest"
   },
   "dependencies": {
