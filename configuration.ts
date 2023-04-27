@@ -12,6 +12,7 @@
  * Do not edit the class manually.
  */
 
+
 type ApiKey =
   | string
   | ((keyParamName: string) => string)
@@ -99,7 +100,7 @@ export class Configuration {
         this.password = param.password;
         this.accessToken = param.accessToken;
         this.basePath = param.basePath;
-        this.baseOptions = param.baseOptions;
+        this.baseOptions = param.baseOptions ?? {};
         this.userAgent = param.userAgent === undefined ? "Konfig/1.0.0/typescript" : param.userAgent;
         this.formDataCtor = param.formDataCtor;
     }

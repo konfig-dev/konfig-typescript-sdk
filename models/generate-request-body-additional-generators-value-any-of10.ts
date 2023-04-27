@@ -63,6 +63,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf10 {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf10
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf10
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -90,16 +96,16 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf10 {
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
      * Acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf10
      */
-    'projectName': any;
+    'projectName': string;
     /**
      * acme.com
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf10
      */
-    'podAuthors': any;
+    'podAuthors': string;
 }
 
 export const GenerateRequestBodyAdditionalGeneratorsValueAnyOf10GeneratorEnum = {

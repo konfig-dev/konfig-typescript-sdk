@@ -63,6 +63,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf7 {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf7
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf7
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -90,16 +96,16 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf7 {
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
      * com.acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf7
      */
-    'groupId': any;
+    'groupId': string;
     /**
      * acme-kotlin-sdk
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf7
      */
-    'artifactId': any;
+    'artifactId': string;
 }
 
 export const GenerateRequestBodyAdditionalGeneratorsValueAnyOf7GeneratorEnum = {

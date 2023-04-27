@@ -23,6 +23,9 @@ import { GenerateRequestBodyGeneratorsAndroidGit } from './generate-request-body
 import { GenerateRequestBodyGeneratorsAndroidTest } from './generate-request-body-generators-android-test';
 // May contain unused imports in some cases
 // @ts-ignore
+import { GenerateRequestBodyGeneratorsPythonTopLevelOperations } from './generate-request-body-generators-python-top-level-operations';
+// May contain unused imports in some cases
+// @ts-ignore
 import { GenerateRequestBodyGeneratorsTypescriptAnyOfPagination } from './generate-request-body-generators-typescript-any-of-pagination';
 
 /**
@@ -66,6 +69,12 @@ export interface GenerateRequestBodyGeneratorsTypescriptAnyOf {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -93,10 +102,10 @@ export interface GenerateRequestBodyGeneratorsTypescriptAnyOf {
     'clientName': string;
     /**
      * acme-typescript-sdk
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
      */
-    'npmName': any;
+    'npmName': string;
     /**
      * 
      * @type {GenerateRequestBodyGeneratorsTypescriptAnyOfPagination}
@@ -104,16 +113,34 @@ export interface GenerateRequestBodyGeneratorsTypescriptAnyOf {
      */
     'pagination'?: GenerateRequestBodyGeneratorsTypescriptAnyOfPagination;
     /**
-     * 
+     * A list of stateful properties generated into the SDK that can be used in custom implementation hooks. This is useful when you need state in the SDK that is not described in the OpenAPI Specification such as a key used for request signing.
      * @type {Array<string>}
      * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
      */
     'clientState'?: Array<string>;
     /**
      * 
-     * @type {{ [key: string]: string; }}
+     * @type {Array<string>}
      * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
      */
-    'topLevelOperations'?: { [key: string]: string; };
+    'removeRequiredProperties'?: Array<string>;
+    /**
+     * 
+     * @type {GenerateRequestBodyGeneratorsPythonTopLevelOperations}
+     * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
+     */
+    'topLevelOperations'?: GenerateRequestBodyGeneratorsPythonTopLevelOperations;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
+     */
+    'includeFetchAdapter'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GenerateRequestBodyGeneratorsTypescriptAnyOf
+     */
+    'includeEventSourceParser'?: boolean;
 }
 

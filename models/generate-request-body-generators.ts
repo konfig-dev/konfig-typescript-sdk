@@ -23,6 +23,9 @@ import { GenerateRequestBodyGeneratorsCsharp } from './generate-request-body-gen
 import { GenerateRequestBodyGeneratorsGo } from './generate-request-body-generators-go';
 // May contain unused imports in some cases
 // @ts-ignore
+import { GenerateRequestBodyGeneratorsJava } from './generate-request-body-generators-java';
+// May contain unused imports in some cases
+// @ts-ignore
 import { GenerateRequestBodyGeneratorsKotlin } from './generate-request-body-generators-kotlin';
 // May contain unused imports in some cases
 // @ts-ignore
@@ -57,10 +60,10 @@ export interface GenerateRequestBodyGenerators {
     'android'?: GenerateRequestBodyGeneratorsAndroid;
     /**
      * 
-     * @type {GenerateRequestBodyGeneratorsAndroid}
+     * @type {GenerateRequestBodyGeneratorsJava}
      * @memberof GenerateRequestBodyGenerators
      */
-    'java'?: GenerateRequestBodyGeneratorsAndroid;
+    'java'?: GenerateRequestBodyGeneratorsJava;
     /**
      * 
      * @type {GenerateRequestBodyGeneratorsRuby}

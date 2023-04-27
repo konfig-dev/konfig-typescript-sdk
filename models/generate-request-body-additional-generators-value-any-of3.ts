@@ -54,6 +54,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf3 {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf3
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf3
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 

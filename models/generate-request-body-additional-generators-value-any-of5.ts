@@ -63,6 +63,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf5 {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf5
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf5
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -89,17 +95,23 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf5 {
      */
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
-     * 
+     * The path to a logo image that is copied to the generated C# SDK to be used as an image on https://nuget.org. This is required and important for branding your SDK.
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf5
      */
     'logoPath': string;
     /**
-     * Acme.Net
-     * @type {any}
+     * The name of this package that shows up on https://nuget.org (e.g. \"Acme.Net\")
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf5
      */
-    'packageName': any;
+    'packageName': string;
+    /**
+     * A list of stateful properties generated into the SDK that can be used in custom implementation hooks. This is useful when you need state in the SDK that is not described in the OpenAPI Specification such as a key used for request signing.
+     * @type {Array<string>}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf5
+     */
+    'clientState'?: Array<string>;
 }
 
 export const GenerateRequestBodyAdditionalGeneratorsValueAnyOf5GeneratorEnum = {

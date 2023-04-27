@@ -123,28 +123,40 @@ export interface GenerateRequestBody {
     'infoContactName'?: string;
     /**
      * 
+     * @type {boolean}
+     * @memberof GenerateRequestBody
+     */
+    'omitInfoDescription'?: boolean;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GenerateRequestBody
+     */
+    'validateSpec'?: boolean;
+    /**
+     * 
      * @type {string}
      * @memberof GenerateRequestBody
      */
     'infoContactUrl'?: string;
     /**
      * Multiple tags can cause conflicts for TypeScript SDK
-     * @type {any}
+     * @type {boolean}
      * @memberof GenerateRequestBody
      */
-    'takeFirstTag'?: any;
+    'takeFirstTag'?: boolean;
     /**
      * Default array value is not supported in Java SDK
-     * @type {any}
+     * @type {boolean}
      * @memberof GenerateRequestBody
      */
-    'removeDefaultArrayValues'?: any;
+    'removeDefaultArrayValues'?: boolean;
     /**
      * Array data type is not supported in TypeScript SDK for OAS 3.1
-     * @type {any}
+     * @type {boolean}
      * @memberof GenerateRequestBody
      */
-    'convertArrayDataTypesToAny'?: any;
+    'convertArrayDataTypesToAny'?: boolean;
     /**
      * 
      * @type {GenerateRequestBodyAllObjectsHaveAdditionalProperties}

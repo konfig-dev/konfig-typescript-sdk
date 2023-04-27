@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsRuby {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsRuby
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsRuby
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 

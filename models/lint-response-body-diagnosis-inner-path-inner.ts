@@ -14,16 +14,9 @@
 
 
 /**
- * 
+ * @type LintResponseBodyDiagnosisInnerPathInner
  * @export
- * @interface LintRequestBody
  */
-export interface LintRequestBody {
-    /**
-     * JSON or YAML string of your OpenAPI Specification
-     * @type {string}
-     * @memberof LintRequestBody
-     */
-    'spec': string;
-}
+export type LintResponseBodyDiagnosisInnerPathInner = number | string;
+
 

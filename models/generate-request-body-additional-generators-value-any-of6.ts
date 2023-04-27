@@ -63,6 +63,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf6 {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf6
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf6
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -90,10 +96,16 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf6 {
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
      * acme-php
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf6
      */
-    'packageName': any;
+    'packageName': string;
+    /**
+     * The username used to publish to packagist.org
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf6
+     */
+    'packagistUsername'?: string;
     /**
      * 
      * @type {string}

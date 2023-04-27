@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsCsharp {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsCsharp
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsCsharp
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -83,16 +89,22 @@ export interface GenerateRequestBodyGeneratorsCsharp {
      */
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
-     * 
+     * The path to a logo image that is copied to the generated C# SDK to be used as an image on https://nuget.org. This is required and important for branding your SDK.
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsCsharp
      */
     'logoPath': string;
     /**
-     * Acme.Net
-     * @type {any}
+     * The name of this package that shows up on https://nuget.org (e.g. \"Acme.Net\")
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsCsharp
      */
-    'packageName': any;
+    'packageName': string;
+    /**
+     * A list of stateful properties generated into the SDK that can be used in custom implementation hooks. This is useful when you need state in the SDK that is not described in the OpenAPI Specification such as a key used for request signing.
+     * @type {Array<string>}
+     * @memberof GenerateRequestBodyGeneratorsCsharp
+     */
+    'clientState'?: Array<string>;
 }
 

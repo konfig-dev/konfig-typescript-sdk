@@ -12,6 +12,9 @@
  * Do not edit the class manually.
  */
 
+// May contain unused imports in some cases
+// @ts-ignore
+import { LintResponseBodyDiagnosisInner } from './lint-response-body-diagnosis-inner';
 
 /**
  * 
@@ -21,15 +24,15 @@
 export interface LintResponseBody {
     /**
      * 
-     * @type {Array<any>}
+     * @type {Array<LintResponseBodyDiagnosisInner>}
      * @memberof LintResponseBody
      */
-    'diagnosis': Array<any>;
+    'diagnosis': Array<LintResponseBodyDiagnosisInner>;
     /**
      * `true` if no warnings or errors were found while linting else `false`
-     * @type {any}
+     * @type {boolean}
      * @memberof LintResponseBody
      */
-    'passed': any;
+    'passed': boolean;
 }
 

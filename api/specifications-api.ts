@@ -22,9 +22,12 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 // @ts-ignore
 import { PushRequestBody } from '../models';
 // @ts-ignore
+import { PushRequestBodyGitHub } from '../models';
+// @ts-ignore
 import { PushResponseBody } from '../models';
 import { paginate } from "../pagination/paginate";
 import { requestBeforeHook } from '../requestBeforeHook';
+import { SpecificationsApiCustom } from "./specifications-api-custom";
 /**
  * SpecificationsApi - axios parameter creator
  * @export
@@ -57,14 +60,14 @@ export const SpecificationsApiAxiosParamCreator = function (configuration?: Conf
 
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(pushRequestBody, localVarRequestOptions, configuration)
-
             requestBeforeHook({
-              queryParameters: localVarQueryParameter,
-              requestConfig: localVarRequestOptions,
-              path: localVarPath,
-              configuration
+                requestBody: pushRequestBody,
+                queryParameters: localVarQueryParameter,
+                requestConfig: localVarRequestOptions,
+                path: localVarPath,
+                configuration
             });
+            localVarRequestOptions.data = serializeDataIfNeeded(pushRequestBody, localVarRequestOptions, configuration)
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             return {
@@ -131,7 +134,7 @@ export type SpecificationsApiPushRequest = {
  * @class SpecificationsApi
  * @extends {BaseAPI}
  */
-export class SpecificationsApi extends BaseAPI {
+export class SpecificationsApi extends SpecificationsApiCustom {
     /**
      * Push your OpenAPI Specification to Konfig to trigger SDK generation for a specified repository
      * @summary Push your OpenAPI Specification to Konfig

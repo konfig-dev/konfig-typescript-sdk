@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsPhp {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsPhp
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsPhp
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -84,10 +90,16 @@ export interface GenerateRequestBodyGeneratorsPhp {
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * acme-php
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsPhp
      */
-    'packageName': any;
+    'packageName': string;
+    /**
+     * The username used to publish to packagist.org
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsPhp
+     */
+    'packagistUsername'?: string;
     /**
      * 
      * @type {string}

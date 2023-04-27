@@ -16,20 +16,20 @@
 /**
  * 
  * @export
- * @interface PushRequestBodyGitHub
+ * @interface GenerateRequestBodyGeneratorsPythonTopLevelOperationsAnyOfInner
  */
-export interface PushRequestBodyGitHub {
+export interface GenerateRequestBodyGeneratorsPythonTopLevelOperationsAnyOfInner {
     /**
-     * The account owner of the repository
+     * 
      * @type {string}
-     * @memberof PushRequestBodyGitHub
+     * @memberof GenerateRequestBodyGeneratorsPythonTopLevelOperationsAnyOfInner
      */
-    'owner': string;
+    'operationId': string;
     /**
-     * The name of the repository
+     * 
      * @type {string}
-     * @memberof PushRequestBodyGitHub
+     * @memberof GenerateRequestBodyGeneratorsPythonTopLevelOperationsAnyOfInner
      */
-    'repo': string;
+    'methodName': string;
 }
 

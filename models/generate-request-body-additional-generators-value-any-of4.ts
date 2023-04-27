@@ -69,28 +69,28 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf4 {
     'useUnionTypes'?: boolean;
     /**
      * AcmeClient
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf4
      */
-    'clientName'?: any;
+    'clientName'?: string;
     /**
      * SDK for Acme\'s REST API
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf4
      */
-    'npmDescription': any;
+    'npmDescription': string;
     /**
      * acme.com
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf4
      */
-    'npmAuthor': any;
+    'npmAuthor': string;
     /**
      * acme-typescript-sdk
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf4
      */
-    'npmName': any;
+    'npmName': string;
     /**
      * 
      * @type {string}

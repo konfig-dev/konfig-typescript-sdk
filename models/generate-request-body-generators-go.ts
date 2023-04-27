@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsGo {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsGo
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsGo
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -84,9 +90,9 @@ export interface GenerateRequestBodyGeneratorsGo {
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsGo
      */
-    'packageName': any;
+    'packageName': string;
 }
 

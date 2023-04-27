@@ -23,6 +23,9 @@ import { GenerateRequestBodyGeneratorsAndroidGit } from './generate-request-body
 import { GenerateRequestBodyGeneratorsAndroidTest } from './generate-request-body-generators-android-test';
 // May contain unused imports in some cases
 // @ts-ignore
+import { GenerateRequestBodyGeneratorsPythonTopLevelOperations } from './generate-request-body-generators-python-top-level-operations';
+// May contain unused imports in some cases
+// @ts-ignore
 import { GenerateRequestBodyGeneratorsTypescriptAnyOf } from './generate-request-body-generators-typescript-any-of';
 // May contain unused imports in some cases
 // @ts-ignore

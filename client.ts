@@ -17,13 +17,15 @@ import {
   SpecificationsApi,
 } from "./api";
 import { Configuration, ConfigurationParameters } from "./configuration";
+import { KonfigCustom } from "./client-custom";
 
-export class Konfig {
+export class Konfig extends KonfigCustom {
   readonly linting: LintingApi;
   readonly sdk: SdkApi;
   readonly specifications: SpecificationsApi;
 
   constructor(configurationParameters: ConfigurationParameters) {
+    super(configurationParameters);
     const configuration = new Configuration(configurationParameters);
     this.linting = new LintingApi(configuration);
     this.sdk = new SdkApi(configuration);

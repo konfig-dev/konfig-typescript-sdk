@@ -22,15 +22,63 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError } fr
 // @ts-ignore
 import { GenerateRequestBody } from '../models';
 // @ts-ignore
+import { GenerateRequestBodyAllObjectsHaveAdditionalProperties } from '../models';
+// @ts-ignore
+import { GenerateRequestBodyFixConfig } from '../models';
+// @ts-ignore
+import { GenerateRequestBodyGenerators } from '../models';
+// @ts-ignore
 import { GenerateResponseBody } from '../models';
 import { paginate } from "../pagination/paginate";
 import { requestBeforeHook } from '../requestBeforeHook';
+import { SdkApiCustom } from "./sdk-api-custom";
 /**
  * SdkApi - axios parameter creator
  * @export
  */
 export const SdkApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
+        /**
+         * Python formatter using the black package
+         * @summary Format Python Code
+         * @param {string} [body] 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        formatPython: async (body?: string, options: AxiosRequestConfig = {}): Promise<RequestArgs> => {
+            const localVarPath = `/formatPython`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions: AxiosRequestConfig = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = configuration ? { "User-Agent": configuration.userAgent } : {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'text/plain';
+
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            requestBeforeHook({
+                requestBody: body,
+                queryParameters: localVarQueryParameter,
+                requestConfig: localVarRequestOptions,
+                path: localVarPath,
+                configuration
+            });
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          * Generate SDKs and receive signed S3 download URLs for the generated packages
          * @summary Generate SDKs
@@ -52,25 +100,23 @@ export const SdkApiAxiosParamCreator = function (configuration?: Configuration) 
             const localVarQueryParameter = {} as any;
 
             // authentication authorization required
-            await setApiKeyToObject({object: localVarHeaderParameter, keyParamName: "authorization", configuration})
-
+            await setApiKeyToObject({ object: localVarHeaderParameter, keyParamName: "authorization", configuration })
             // authentication session required
             await setApiKeyToObject({object: localVarHeaderParameter, type: "Cookie", key: "Cookie", keyParamName: "session", configuration})
-
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(generateRequestBody, localVarRequestOptions, configuration)
-
             requestBeforeHook({
-              queryParameters: localVarQueryParameter,
-              requestConfig: localVarRequestOptions,
-              path: localVarPath,
-              configuration
+                requestBody: generateRequestBody,
+                queryParameters: localVarQueryParameter,
+                requestConfig: localVarRequestOptions,
+                path: localVarPath,
+                configuration
             });
+            localVarRequestOptions.data = serializeDataIfNeeded(generateRequestBody, localVarRequestOptions, configuration)
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             return {
@@ -88,6 +134,17 @@ export const SdkApiAxiosParamCreator = function (configuration?: Configuration) 
 export const SdkApiFp = function(configuration?: Configuration) {
     const localVarAxiosParamCreator = SdkApiAxiosParamCreator(configuration)
     return {
+        /**
+         * Python formatter using the black package
+         * @summary Format Python Code
+         * @param {SdkApiFormatPythonRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async formatPython(requestParameters: SdkApiFormatPythonRequest, options?: AxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.formatPython(requestParameters, options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
         /**
          * Generate SDKs and receive signed S3 download URLs for the generated packages
          * @summary Generate SDKs
@@ -110,6 +167,16 @@ export const SdkApiFactory = function (configuration?: Configuration, basePath?:
     const localVarFp = SdkApiFp(configuration)
     return {
         /**
+         * Python formatter using the black package
+         * @summary Format Python Code
+         * @param {SdkApiFormatPythonRequest} requestParameters Request parameters.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        formatPython(requestParameters: SdkApiFormatPythonRequest, options?: AxiosRequestConfig): AxiosPromise<string> {
+            return localVarFp.formatPython(requestParameters, options).then((request) => request(axios, basePath));
+        },
+        /**
          * Generate SDKs and receive signed S3 download URLs for the generated packages
          * @summary Generate SDKs
          * @param {SdkApiGenerateRequest} requestParameters Request parameters.
@@ -121,6 +188,13 @@ export const SdkApiFactory = function (configuration?: Configuration, basePath?:
         },
     };
 };
+
+/**
+ * Request parameters for formatPython operation in SdkApi.
+ * @export
+ * @interface SdkApiFormatPythonRequest
+ */
+export type SdkApiFormatPythonRequest = string
 
 /**
  * Request parameters for generate operation in SdkApi.
@@ -137,7 +211,19 @@ export type SdkApiGenerateRequest = {
  * @class SdkApi
  * @extends {BaseAPI}
  */
-export class SdkApi extends BaseAPI {
+export class SdkApi extends SdkApiCustom {
+    /**
+     * Python formatter using the black package
+     * @summary Format Python Code
+     * @param {SdkApiFormatPythonRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof SdkApi
+     */
+    public formatPython(requestParameters: SdkApiFormatPythonRequest, options?: AxiosRequestConfig) {
+        return SdkApiFp(this.configuration).formatPython(requestParameters, options).then((request) => request(this.axios, this.basePath));
+    }
+
     /**
      * Generate SDKs and receive signed S3 download URLs for the generated packages
      * @summary Generate SDKs

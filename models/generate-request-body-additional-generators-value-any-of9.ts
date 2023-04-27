@@ -51,6 +51,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf9 {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf9
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf9
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -90,10 +96,10 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf9 {
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
      * acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf9
      */
-    'packageName': any;
+    'packageName': string;
 }
 
 export const GenerateRequestBodyAdditionalGeneratorsValueAnyOf9GeneratorEnum = {

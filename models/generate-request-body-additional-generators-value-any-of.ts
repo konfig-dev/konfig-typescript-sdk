@@ -63,6 +63,12 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf {
      * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -89,23 +95,35 @@ export interface GenerateRequestBodyAdditionalGeneratorsValueAnyOf {
      */
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
-     * com.acme
-     * @type {any}
+     * Uniquely identifies your JVM-based project (ex. \"com.acme\"). By default we publish packages under Konfig\'s group id of \"com.konfigthis\". If you would like to publish to your own group ID then create a Sonatype account (https://central.sonatype.org/publish/publish-guide/#initial-setup) and claim your group ID and add \"dphuang2\" to the list of users that can publish to your group ID.
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
      */
-    'groupId': any;
+    'groupId': string;
     /**
      * acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
      */
-    'packageName'?: any;
+    'packageName'?: string;
     /**
-     * ascme-java-sdk
-     * @type {any}
+     * acme-java-sdk
+     * @type {string}
      * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
      */
-    'artifactId': any;
+    'artifactId': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
+     */
+    'removeKonfigBranding'?: boolean;
+    /**
+     * Modify the behavior of toString() for generated schema classes to return a parsable JSON string as opposed to a string representation of the object\'s properties. This could be useful when you want to log the contents of a schema class without having to manually serialize it to JSON.
+     * @type {boolean}
+     * @memberof GenerateRequestBodyAdditionalGeneratorsValueAnyOf
+     */
+    'toStringReturnsJson'?: boolean;
 }
 
 export const GenerateRequestBodyAdditionalGeneratorsValueAnyOfGeneratorEnum = {

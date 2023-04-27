@@ -27,6 +27,9 @@ import { GenerateRequestBodyGeneratorsPythonGenerator } from './generate-request
 // May contain unused imports in some cases
 // @ts-ignore
 import { GenerateRequestBodyGeneratorsPythonObjectPropertyNamingConvention } from './generate-request-body-generators-python-object-property-naming-convention';
+// May contain unused imports in some cases
+// @ts-ignore
+import { GenerateRequestBodyGeneratorsPythonTopLevelOperations } from './generate-request-body-generators-python-top-level-operations';
 
 /**
  * 
@@ -69,6 +72,12 @@ export interface GenerateRequestBodyGeneratorsPython {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsPython
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsPython
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -90,16 +99,22 @@ export interface GenerateRequestBodyGeneratorsPython {
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * acme_client
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsPython
      */
-    'packageName': any;
+    'packageName': string;
     /**
      * acme-python-sdk
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsPython
      */
-    'projectName': any;
+    'projectName': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GenerateRequestBodyGeneratorsPython
+     */
+    'removeKonfigBranding'?: boolean;
     /**
      * 
      * @type {string}
@@ -119,7 +134,7 @@ export interface GenerateRequestBodyGeneratorsPython {
      */
     'clientName': string;
     /**
-     * 
+     * A list of stateful properties generated into the SDK that can be used in custom implementation hooks. This is useful when you need state in the SDK that is not described in the OpenAPI Specification such as a key used for request signing.
      * @type {Array<string>}
      * @memberof GenerateRequestBodyGeneratorsPython
      */
@@ -144,10 +159,16 @@ export interface GenerateRequestBodyGeneratorsPython {
     'validateRequiredStringsAreNonEmpty'?: boolean;
     /**
      * 
-     * @type {{ [key: string]: string; }}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsPython
      */
-    'topLevelOperations'?: { [key: string]: string; };
+    'packageUrl'?: string;
+    /**
+     * 
+     * @type {GenerateRequestBodyGeneratorsPythonTopLevelOperations}
+     * @memberof GenerateRequestBodyGeneratorsPython
+     */
+    'topLevelOperations'?: GenerateRequestBodyGeneratorsPythonTopLevelOperations;
     /**
      * 
      * @type {GenerateRequestBodyGeneratorsPythonGenerator}

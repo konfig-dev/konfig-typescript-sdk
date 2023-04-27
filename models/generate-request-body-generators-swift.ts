@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsSwift {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsSwift
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsSwift
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -84,15 +90,15 @@ export interface GenerateRequestBodyGeneratorsSwift {
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * Acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsSwift
      */
-    'projectName': any;
+    'projectName': string;
     /**
      * acme.com
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsSwift
      */
-    'podAuthors': any;
+    'podAuthors': string;
 }
 

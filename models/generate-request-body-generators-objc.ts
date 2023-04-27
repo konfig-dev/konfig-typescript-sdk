@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsObjc {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsObjc
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsObjc
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -84,27 +90,27 @@ export interface GenerateRequestBodyGeneratorsObjc {
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * AcmeClient
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsObjc
      */
-    'podName': any;
+    'podName': string;
     /**
      * A
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsObjc
      */
-    'classPrefix': any;
+    'classPrefix': string;
     /**
      * acme.com
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsObjc
      */
-    'authorName': any;
+    'authorName': string;
     /**
      * engineering@acme.com
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsObjc
      */
-    'authorEmail': any;
+    'authorEmail': string;
 }
 

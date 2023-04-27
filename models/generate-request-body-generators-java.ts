@@ -25,86 +25,98 @@ import { GenerateRequestBodyGeneratorsAndroidTest } from './generate-request-bod
 /**
  * 
  * @export
- * @interface GenerateRequestBodyGeneratorsAndroid
+ * @interface GenerateRequestBodyGeneratorsJava
  */
-export interface GenerateRequestBodyGeneratorsAndroid {
+export interface GenerateRequestBodyGeneratorsJava {
     /**
      * 
      * @type {{ [key: string]: GenerateRequestBodyGeneratorsAndroidFilesValue; }}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'files'?: { [key: string]: GenerateRequestBodyGeneratorsAndroidFilesValue; };
     /**
      * 
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'version': string;
     /**
      * 
      * @type {GenerateRequestBodyGeneratorsAndroidGit}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'git': GenerateRequestBodyGeneratorsAndroidGit;
     /**
      * 
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'outputDirectory': string;
     /**
      * 
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'readmeSnippet'?: string;
     /**
      * 
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'readmeDescriptionSnippet'?: string;
     /**
      * 
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
      * @type {boolean}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'disabled'?: boolean;
     /**
      * 
      * @type {number}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'defaultTimeout'?: number;
     /**
      * 
      * @type {GenerateRequestBodyGeneratorsAndroidTest}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * Uniquely identifies your JVM-based project (ex. \"com.acme\"). By default we publish packages under Konfig\'s group id of \"com.konfigthis\". If you would like to publish to your own group ID then create a Sonatype account (https://central.sonatype.org/publish/publish-guide/#initial-setup) and claim your group ID and add \"dphuang2\" to the list of users that can publish to your group ID.
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'groupId': string;
     /**
      * acme
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'packageName'?: string;
     /**
-     * ascme-java-sdk
+     * acme-java-sdk
      * @type {string}
-     * @memberof GenerateRequestBodyGeneratorsAndroid
+     * @memberof GenerateRequestBodyGeneratorsJava
      */
     'artifactId': string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof GenerateRequestBodyGeneratorsJava
+     */
+    'removeKonfigBranding'?: boolean;
+    /**
+     * Modify the behavior of toString() for generated schema classes to return a parsable JSON string as opposed to a string representation of the object\'s properties. This could be useful when you want to log the contents of a schema class without having to manually serialize it to JSON.
+     * @type {boolean}
+     * @memberof GenerateRequestBodyGeneratorsJava
+     */
+    'toStringReturnsJson'?: boolean;
 }
 

@@ -24,10 +24,10 @@ import { PushRequestBodyGitHub } from './push-request-body-git-hub';
 export interface PushRequestBody {
     /**
      * JSON or YAML string of your OpenAPI Specification
-     * @type {any}
+     * @type {string}
      * @memberof PushRequestBody
      */
-    'spec': any;
+    'spec': string;
     /**
      * 
      * @type {PushRequestBodyGitHub}

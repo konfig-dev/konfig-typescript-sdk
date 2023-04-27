@@ -63,6 +63,12 @@ export interface GenerateRequestBodyGeneratorsKotlin {
      * @type {string}
      * @memberof GenerateRequestBodyGeneratorsKotlin
      */
+    'readmeDescriptionSnippet'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GenerateRequestBodyGeneratorsKotlin
+     */
     'apiDocumentationAuthenticationPartial'?: string;
     /**
      * 
@@ -84,15 +90,15 @@ export interface GenerateRequestBodyGeneratorsKotlin {
     'test'?: GenerateRequestBodyGeneratorsAndroidTest;
     /**
      * com.acme
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsKotlin
      */
-    'groupId': any;
+    'groupId': string;
     /**
      * acme-kotlin-sdk
-     * @type {any}
+     * @type {string}
      * @memberof GenerateRequestBodyGeneratorsKotlin
      */
-    'artifactId': any;
+    'artifactId': string;
 }
 

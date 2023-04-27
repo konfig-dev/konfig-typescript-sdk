@@ -25,6 +25,7 @@ import { LintRequestBody } from '../models';
 import { LintResponseBody } from '../models';
 import { paginate } from "../pagination/paginate";
 import { requestBeforeHook } from '../requestBeforeHook';
+import { LintingApiCustom } from "./linting-api-custom";
 /**
  * LintingApi - axios parameter creator
  * @export
@@ -59,14 +60,14 @@ export const LintingApiAxiosParamCreator = function (configuration?: Configurati
 
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = serializeDataIfNeeded(lintRequestBody, localVarRequestOptions, configuration)
-
             requestBeforeHook({
-              queryParameters: localVarQueryParameter,
-              requestConfig: localVarRequestOptions,
-              path: localVarPath,
-              configuration
+                requestBody: lintRequestBody,
+                queryParameters: localVarQueryParameter,
+                requestConfig: localVarRequestOptions,
+                path: localVarPath,
+                configuration
             });
+            localVarRequestOptions.data = serializeDataIfNeeded(lintRequestBody, localVarRequestOptions, configuration)
 
             setSearchParams(localVarUrlObj, localVarQueryParameter);
             return {
@@ -133,7 +134,7 @@ export type LintingApiLintRequest = {
  * @class LintingApi
  * @extends {BaseAPI}
  */
-export class LintingApi extends BaseAPI {
+export class LintingApi extends LintingApiCustom {
     /**
      * Lint your OpenAPI Specification to ensure generation of high quality SDKs with Konfig
      * @summary Lint your OpenAPI Specification

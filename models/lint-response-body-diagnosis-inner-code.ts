@@ -14,9 +14,9 @@
 
 
 /**
- * @type GenerateRequestBodyFixConfigModifyValue
+ * @type LintResponseBodyDiagnosisInnerCode
  * @export
  */
-export type GenerateRequestBodyFixConfigModifyValue = boolean | number | object | string;
+export type LintResponseBodyDiagnosisInnerCode = string | number;
 
 

@@ -14,7 +14,7 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
-import { GenerateRequestBodyFixConfigModifyValue } from './generate-request-body-fix-config-modify-value';
+import { GenerateRequestBodyFixConfigUpdatePropertyValueValueValue } from './generate-request-body-fix-config-update-property-value-value-value';
 
 /**
  * 
@@ -24,9 +24,21 @@ import { GenerateRequestBodyFixConfigModifyValue } from './generate-request-body
 export interface GenerateRequestBodyFixConfig {
     /**
      * 
-     * @type {{ [key: string]: GenerateRequestBodyFixConfigModifyValue; }}
+     * @type {{ [key: string]: { [key: string]: { [key: string]: GenerateRequestBodyFixConfigUpdatePropertyValueValueValue; }; }; }}
      * @memberof GenerateRequestBodyFixConfig
      */
-    'modify'?: { [key: string]: GenerateRequestBodyFixConfigModifyValue; };
+    'updateProperty'?: { [key: string]: { [key: string]: { [key: string]: GenerateRequestBodyFixConfigUpdatePropertyValueValueValue; }; }; };
+    /**
+     * A JSON where the key is a JSON Path pointing to a location in the OAS and the value is the JSON value to be placed at the location.
+     * @type {{ [key: string]: GenerateRequestBodyFixConfigUpdatePropertyValueValueValue; }}
+     * @memberof GenerateRequestBodyFixConfig
+     */
+    'modify'?: { [key: string]: GenerateRequestBodyFixConfigUpdatePropertyValueValueValue; };
+    /**
+     * A JSON where the key is a JSON Path pointing to a location in the OAS and the value is a JSON Object that is merged with the existing JSON Object at that location.
+     * @type {{ [key: string]: { [key: string]: GenerateRequestBodyFixConfigUpdatePropertyValueValueValue; }; }}
+     * @memberof GenerateRequestBodyFixConfig
+     */
+    'update'?: { [key: string]: { [key: string]: GenerateRequestBodyFixConfigUpdatePropertyValueValueValue; }; };
 }
 
